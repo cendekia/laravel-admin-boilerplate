@@ -16,7 +16,7 @@ class AdminBoilerplateServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'viewBoiler');
 
         $this->publishes([
-            __DIR__.'/../../public/' => public_path('vendor/cendekia/admin'),
+            __DIR__.'/../../public/' => public_path('vendor/cendekia/laravel-admin-boilerplate'),
         ]);
     }
 

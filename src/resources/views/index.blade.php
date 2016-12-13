@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Admin CMS</title>
+    <title>Admin Boilerplate</title>
     <!-- Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <!-- Admin CSS -->
-    <link href="{{ elixir('css/admin.css', 'vendor/cendekia/admin/build') }}" rel="stylesheet">
+    <link href="{{ elixir('css/admin-boilerplate.css', 'vendor/cendekia/laravel-admin-boilerplate/build') }}" rel="stylesheet">
 </head>
 
 <body class="theme-red">
