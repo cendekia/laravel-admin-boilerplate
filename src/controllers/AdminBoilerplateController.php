@@ -7,7 +7,7 @@ class AdminBoilerplateController extends Controller
 {
     public function index()
     {
-        return view('adminboiler::index');
+        return view('viewBoiler::index');
     }
  
 }

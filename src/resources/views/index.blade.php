@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Welcome To | Bootstrap Based Admin Template - Material Design</title>
+    <title>Admin CMS</title>
     <!-- Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -13,23 +13,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
-    <!-- Bootstrap Core Css -->
-    <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Waves Effect Css -->
-    <link href="plugins/node-waves/waves.css" rel="stylesheet" />
-
-    <!-- Animation Css -->
-    <link href="plugins/animate-css/animate.css" rel="stylesheet" />
-
-    <!-- Morris Chart Css-->
-    <link href="plugins/morrisjs/morris.css" rel="stylesheet" />
-
-    <!-- Custom Css -->
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
-    <link href="css/themes/all-themes.css" rel="stylesheet" />
+    <!-- Admin CSS -->
+    <link href="{{ elixir('css/admin.css', 'vendor/cendekia/admin/build') }}" rel="stylesheet">
 </head>
 
 <body class="theme-red">
@@ -1100,7 +1085,7 @@
         </div>
     </section>
 
-    <!-- Jquery Core Js -->
+    {{-- <!-- Jquery Core Js -->
     <script src="plugins/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core Js -->
@@ -1140,7 +1125,7 @@
     <script src="js/pages/index.js"></script>
 
     <!-- Demo Js -->
-    <script src="js/demo.js"></script>
+    <script src="js/demo.js"></script> --}}
 </body>
 
 </html>

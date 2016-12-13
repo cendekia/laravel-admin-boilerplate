@@ -13,7 +13,11 @@ class AdminBoilerplateServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'adminboiler');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'viewBoiler');
+
+        $this->publishes([
+            __DIR__.'/../../public/' => public_path('vendor/cendekia/admin'),
+        ]);
     }
 
     /**
