@@ -1,3 +1,6 @@
 {
-  "css/admin-boilerplate.css": "css/admin-boilerplate-9eb1d0021b.css"
+  "css/admin-boilerplate.css": "css/admin-boilerplate-9eb1d0021b.css",
+  "js/admin-boilerplate.js": "js/admin-boilerplate-c59ac58b99.js",
+  "js/admin-custom.js": "js/admin-custom-cc5e2e83b2.js",
+  "js/admin-page-index.js": "js/admin-page-index-314524a72d.js"
 }

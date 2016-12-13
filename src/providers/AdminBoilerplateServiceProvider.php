@@ -13,10 +13,11 @@ class AdminBoilerplateServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'viewBoiler');
+        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'viewBoiler');
 
         $this->publishes([
             __DIR__.'/../../public/' => public_path('vendor/cendekia/laravel-admin-boilerplate'),
+            __DIR__.'/../../public/images/' => public_path('vendor/cendekia/laravel-admin-boilerplate/build/images'),
         ]);
     }
 
