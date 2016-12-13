@@ -13,7 +13,5 @@ elixir((mix) => {
         asset_sources + 'css/materialize.css',
         asset_sources + 'css/style.css',
         asset_sources + 'css/all-themes.css',
-    ],  css_destination +'admin.css')
-
-    mix.version(['css/admin.css'])
+    ],  css_destination +'admin.css').version(['css/admin.css'])
 });
