@@ -18,6 +18,8 @@ class AdminBoilerplateServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../../public/' => public_path('vendor/cendekia/laravel-admin-boilerplate'),
             __DIR__.'/../../public/images/' => public_path('vendor/cendekia/laravel-admin-boilerplate/build/images'),
+            __DIR__.'/../config/admin_boilerplate.php' => config_path('admin_boilerplate.php'),
+            __DIR__.'/../support/' => app_path('Support'),
         ]);
     }
 

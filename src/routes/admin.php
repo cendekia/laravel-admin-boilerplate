@@ -1,3 +1,3 @@
 <?php
 
-Route::get('admin-cms',  'Cendekia\LaravelAdminBoilerplate\Controllers\AdminBoilerplateController@index');
+Route::get(config('admin_boilerplate.url'),  'Cendekia\LaravelAdminBoilerplate\Controllers\AdminBoilerplateController@index');
