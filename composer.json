@@ -16,7 +16,7 @@
         "files": [
             "vendor/cendekia/laravel-admin-boilderplate/src/support/helpers.php"
         ]
-    }
+    },
     "minimum-stability": "dev",
     "require": {}
 }
