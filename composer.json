@@ -9,6 +9,14 @@
             "email": "me@cendekiapp.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Cendekia\\LaravelAdminBoilerplate\\": "vendor/cendekia/laravel-admin-boilerplate/src/providers"
+        },
+        "files": [
+            "vendor/cendekia/laravel-admin-boilderplate/src/support/helpers.php"
+        ]
+    }
     "minimum-stability": "dev",
     "require": {}
 }
