@@ -1,6 +1,6 @@
 {
     "name": "cendekia/laravel-admin-boilerplate",
-    "description": "an administrator boilerplate feature of laravel 5",
+    "description": "an administrator boilerplate feature for laravel 5",
     "type": "laravel-package",
     "license": "MIT",
     "authors": [
