@@ -20,6 +20,10 @@ class AdminBoilerplateServiceProvider extends ServiceProvider
         ], 'migrations');
 
         $this->publishes([
+            __DIR__.'/../models' => app_path('Models')
+        ], 'models');
+
+        $this->publishes([
             __DIR__.'/../config/admin_boilerplate.php' => config_path('admin_boilerplate.php'),
         ], 'config');
 
