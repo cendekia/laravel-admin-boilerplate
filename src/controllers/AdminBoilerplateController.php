@@ -1,5 +1,5 @@
 <?php
-namespace Cendekia\LaravelAdminBoilerplate\Controllers;
+namespace App\Http\Controllers\Admin;
  
 use App\Http\Controllers\Controller;
  
@@ -7,7 +7,7 @@ class AdminBoilerplateController extends Controller
 {
     public function index()
     {
-        return view('viewBoiler::index');
+        return view('vendor.admin.index');
     }
  
 }

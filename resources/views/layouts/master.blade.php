@@ -16,13 +16,13 @@
 
 	<body class="theme-red">
 		
-		@include('viewBoiler::components.preloader')
+		@include('admin-view::components.preloader')
 	    <div class="overlay"></div>
-	    @include('viewBoiler::components.top_navigation')
+	    @include('admin-view::components.top_navigation')
 
 	    <section>
-	        @include('viewBoiler::components.left_sidebar')
-	        @include('viewBoiler::components.right_sidebar')
+	        @include('admin-view::components.left_sidebar')
+	        @include('admin-view::components.right_sidebar')
 	    </section>
 
 	    <section class="content">

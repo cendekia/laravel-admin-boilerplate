@@ -1,4 +1,4 @@
-@extends('viewBoiler::layouts.master')
+@extends('admin-view::layouts.master')
 
 @section('content')
     <div class="container-fluid">

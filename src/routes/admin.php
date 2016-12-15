@@ -1,3 +1,6 @@
 <?php
 
-Route::get(config('admin_boilerplate.url'),  'Cendekia\LaravelAdminBoilerplate\Controllers\AdminBoilerplateController@index');
+$prefix = config('admin_boilerplate.url');
+$path = config('admin_boilerplate.controller_path');
+
+Route::get($prefix,  $path.'\AdminBoilerplateController@index');
