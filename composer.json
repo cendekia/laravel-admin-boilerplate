@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Cendekia\\LaravelAdminBoilerplate\\": "src/providers"
+            "Cendekia\\LaravelAdminBoilerplate\\": "src/"
         },
         "files": [
             "src/support/helpers.php"
