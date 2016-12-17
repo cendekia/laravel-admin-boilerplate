@@ -2,6 +2,7 @@
 
 namespace Cendekia\LaravelAdminBoilerplate;
 
+use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 
 class AdminBoilerplateServiceProvider extends ServiceProvider
@@ -11,7 +12,7 @@ class AdminBoilerplateServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(Router $router)
     {
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'admin-view');
 
@@ -26,6 +27,10 @@ class AdminBoilerplateServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/config/admin_boilerplate.php' => config_path('admin_boilerplate.php'),
         ], 'config');
+
+        $this->publishes([
+            __DIR__.'/middleware' => app_path('Http/Middleware/Admin/'),
+        ], 'middleware');
 
         $this->publishes([
             __DIR__.'/controllers/' => app_path('Http/Controllers/Admin'),
@@ -43,6 +48,8 @@ class AdminBoilerplateServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../resources/views' => resource_path('views/vendor/admin'),
         ], 'template');
+
+        $router->middleware('admin.auth', 'App\Http\Middleware\Admin\AdminAuthenticate');
     }
 
     /**
