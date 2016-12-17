@@ -3,6 +3,7 @@
 namespace App\Http\Middleware\Admin;
 
 use Closure;
+use Illuminate\Support\Facades\Auth;
 
 class AdminAuthenticate
 {
@@ -19,7 +20,7 @@ class AdminAuthenticate
             return redirect(config('admin_boilerplate.url') . '/signin');
         }
 
-        if (\Auth::user()->restricted_access != 1) {
+        if (\Auth::user()->all_access != 1) {
             return redirect('/');
         }
 
