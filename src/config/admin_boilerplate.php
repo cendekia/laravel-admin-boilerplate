@@ -13,6 +13,14 @@ return [
 	'elixir' => 'vendor/cendekia/laravel-admin-boilerplate/build',
 
 	// admin controller path
-	'controller_path' => 'App\Http\Controllers\Admin'
+	'controller_path' => 'App\Http\Controllers\Admin',
+
+	// boilerplate theme attributes
+	'themes' => [
+		// Color choices
+			// (red, pink, purple, deep-purple, indigo, blue, light-blue, cyan, teal, green)
+			// (yellow, amber, orange, deep-orange, brown, grey, blue-grey, black, light-green, lime)
+		'color' => 'cyan', //default
+	]
 
 ];

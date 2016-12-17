@@ -14,7 +14,7 @@
 	    <link href="{{ admin_elixir('css/admin-boilerplate.css') }}" rel="stylesheet">
 	</head>
 
-	<body class="login-page">
+	<body class="login-page bg-{{ config('admin_boilerplate.themes.color') }}">
 	    <div class="login-box">
 	        <div class="logo">
 	            <a href="javascript:void(0);">{!! config('admin_boilerplate.admin_name') !!}</a>
@@ -22,14 +22,14 @@
 	        </div>
 	        <div class="card">
 	            <div class="body">
-	                <form id="sign_in" method="POST">
+	            	{!! Form::open(['id' => 'sign_in', 'url' => config('admin_boilerplate.url') . '/signin', 'method' => 'post']) !!}
 	                    <div class="msg">Sign in to start your session</div>
 	                    <div class="input-group">
 	                        <span class="input-group-addon">
 	                            <i class="material-icons">person</i>
 	                        </span>
 	                        <div class="form-line">
-	                            <input type="text" class="form-control" name="username" placeholder="Username" required autofocus>
+	                        	{{ Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'Username', 'required' => true, 'autofocus' => true]) }}
 	                        </div>
 	                    </div>
 	                    <div class="input-group">
@@ -37,27 +37,27 @@
 	                            <i class="material-icons">lock</i>
 	                        </span>
 	                        <div class="form-line">
-	                            <input type="password" class="form-control" name="password" placeholder="Password" required>
+	                        	{{ Form::password('password', ['class' => 'form-control', 'placeholder' => 'Password', 'required' => true]) }}
 	                        </div>
 	                    </div>
 	                    <div class="row">
 	                        <div class="col-xs-8 p-t-5">
-	                            <input type="checkbox" name="rememberme" id="rememberme" class="filled-in chk-col-pink">
+	                            <input type="checkbox" name="remember" id="rememberme" class="filled-in chk-col-{{ config('admin_boilerplate.themes.color') }}">
 	                            <label for="rememberme">Remember Me</label>
 	                        </div>
 	                        <div class="col-xs-4">
-	                            <button class="btn btn-block bg-pink waves-effect" type="submit">SIGN IN</button>
+	                            <button class="btn btn-block bg-{{ config('admin_boilerplate.themes.color') }} waves-effect" type="submit">SIGN IN</button>
 	                        </div>
 	                    </div>
 	                    <div class="row m-t-15 m-b--20">
-	                        <div class="col-xs-6">
+	                        {{-- <div class="col-xs-6">
 	                            <a href="sign-up.html">Register Now!</a>
 	                        </div>
 	                        <div class="col-xs-6 align-right">
 	                            <a href="forgot-password.html">Forgot Password?</a>
-	                        </div>
+	                        </div> --}}
 	                    </div>
-	                </form>
+	                {!! Form::close() !!}
 	            </div>
 	        </div>
 	    </div>

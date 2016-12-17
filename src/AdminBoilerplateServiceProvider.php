@@ -46,7 +46,7 @@ class AdminBoilerplateServiceProvider extends ServiceProvider
         ], 'helper');
 
         $this->publishes([
-            __DIR__.'/../resources/views' => resource_path('views/vendor/admin'),
+            __DIR__.'/../resources/views' => resource_path('views/vendor/admin-view'),
         ], 'template');
 
         $router->middleware('admin.auth', 'App\Http\Middleware\Admin\AdminAuthenticate');
