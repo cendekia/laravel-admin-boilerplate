@@ -7,9 +7,8 @@ Route::group(['prefix' => $prefix, 'namespace' => $path, 'middleware' => ['web']
     Route::get('signin', 'AuthController@getSignIn');
     Route::post('signin', 'AuthController@postSignIn');
 	Route::get('signout', 'AuthController@getSignOut');
-});
-
-
-Route::group(['prefix' => $prefix, 'namespace' => $path, 'middleware' => ['web', 'admin.auth']], function() use ($path) {
-	Route::get('/',  'AdminBoilerplateController@index');
+	
+	Route::group(['middleware' => ['admin.auth']], function() {
+		Route::get('/',  'AdminBoilerplateController@index');
+	});
 });
