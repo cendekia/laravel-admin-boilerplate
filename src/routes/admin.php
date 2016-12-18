@@ -9,6 +9,6 @@ Route::group(['prefix' => $prefix, 'namespace' => $path, 'middleware' => ['web']
 	Route::get('signout', 'AuthController@getSignOut');
 	
 	Route::group(['middleware' => ['admin.auth']], function() {
-		Route::get('/',  'AdminBoilerplateController@index');
+		Route::get('/',  'DashboardController@index');
 	});
 });

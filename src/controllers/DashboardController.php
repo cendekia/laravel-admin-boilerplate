@@ -3,7 +3,7 @@ namespace App\Http\Controllers\Admin;
  
 use App\Http\Controllers\Controller;
  
-class AdminBoilerplateController extends Controller
+class DashboardController extends Controller
 {
     public function index()
     {
