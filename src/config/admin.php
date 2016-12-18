@@ -2,8 +2,8 @@
 
 return [
 	// admin name and description
-	'admin_name' => env('ADMIN_NAME', 'Admin <b>CMS</b>'),
-	'admin_desc' => env('ADMIN_DESC', 'Laravel Admin Boilerplate'),
+	'name' => env('ADMIN_NAME', 'Admin <b>CMS</b>'),
+	'description' => env('ADMIN_DESC', 'Laravel Admin Boilerplate'),
 
 	// admin url prefix
 	'url' => env('ADMIN_URL', 'admin-cms'),

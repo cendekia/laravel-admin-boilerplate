@@ -14,15 +14,15 @@
 	    <link href="{{ admin_elixir('css/admin-boilerplate.css') }}" rel="stylesheet">
 	</head>
 
-	<body class="login-page bg-{{ config('admin_boilerplate.themes.color') }}">
+	<body class="login-page bg-{{ admin_theme('color') }}">
 	    <div class="login-box">
 	        <div class="logo">
-	            <a href="javascript:void(0);">{!! config('admin_boilerplate.admin_name') !!}</a>
-	            <small>{!! config('admin_boilerplate.admin_desc') !!}</small>
+	            <a href="javascript:void(0);">{!! config('admin.name') !!}</a>
+	            <small>{!! config('admin.description') !!}</small>
 	        </div>
 	        <div class="card">
 	            <div class="body">
-	            	{!! Form::open(['id' => 'sign_in', 'url' => config('admin_boilerplate.url') . '/signin', 'method' => 'post']) !!}
+	            	{!! Form::open(['id' => 'sign_in', 'url' => admin_url('signin'), 'method' => 'post']) !!}
 	                    <div class="msg">Sign in to start your session</div>
 	                    <div class="input-group">
 	                        <span class="input-group-addon">
@@ -42,11 +42,11 @@
 	                    </div>
 	                    <div class="row">
 	                        <div class="col-xs-8 p-t-5">
-	                            <input type="checkbox" name="remember" id="rememberme" class="filled-in chk-col-{{ config('admin_boilerplate.themes.color') }}">
+	                            <input type="checkbox" name="remember" id="rememberme" class="filled-in chk-col-{{ admin_theme('color') }}">
 	                            <label for="rememberme">Remember Me</label>
 	                        </div>
 	                        <div class="col-xs-4">
-	                            <button class="btn btn-block bg-{{ config('admin_boilerplate.themes.color') }} waves-effect" type="submit">SIGN IN</button>
+	                            <button class="btn btn-block bg-{{ admin_theme('color') }} waves-effect" type="submit">SIGN IN</button>
 	                        </div>
 	                    </div>
 	                    <div class="row m-t-15 m-b--20">

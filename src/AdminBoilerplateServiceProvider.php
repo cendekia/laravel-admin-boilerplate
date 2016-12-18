@@ -25,7 +25,7 @@ class AdminBoilerplateServiceProvider extends ServiceProvider
         ], 'models');
 
         $this->publishes([
-            __DIR__.'/config/admin_boilerplate.php' => config_path('admin_boilerplate.php'),
+            __DIR__.'/config/admin.php' => config_path('admin.php'),
         ], 'config');
 
         $this->publishes([

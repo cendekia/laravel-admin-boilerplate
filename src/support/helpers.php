@@ -17,11 +17,10 @@ function admin_url($path = null, $parameters = [], $secure = null)
         return app(UrlGenerator::class);
     }
 
-    $path = config('admin_boilerplate.url') . '/' . $path;
+    $path = config('admin.url') . '/' . $path;
 
     return app(UrlGenerator::class)->to($path, $parameters, $secure);
 }
-
 
 /**
  * Generate an asset path for the application.
@@ -32,9 +31,14 @@ function admin_url($path = null, $parameters = [], $secure = null)
  */
 function admin_asset($path = null, $secure = null)
 {
-	$path = config('admin_boilerplate.asset') . '/' . $path;
+	$path = config('admin.asset') . '/' . $path;
 
     return app('url')->asset($path, $secure);
+}
+
+function admin_theme($attribute = 'color')
+{
+    return config('admin.themes.'.$attribute);
 }
 
 /**

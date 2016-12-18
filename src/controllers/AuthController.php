@@ -17,16 +17,16 @@ class AuthController extends Controller
     public function postSignIn(Request $request)
     {
         if (!\Auth::attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
-            return redirect(config('admin_boilerplate.url') . '/signin');
+            return redirect(admin_url('signin'));
         }
 
-        return redirect(config('admin_boilerplate.url'));
+        return redirect(admin_url('/'));
     }
 
     public function getSignOut()
     {
         \Auth::logout();
 
-        return redirect(config('admin_boilerplate.url') . '/signin');
+        return redirect(admin_url('signin'));
     }
 }

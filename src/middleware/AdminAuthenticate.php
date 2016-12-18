@@ -17,7 +17,7 @@ class AdminAuthenticate
     public function handle($request, Closure $next)
     {
         if (!\Auth::check()) {
-            return redirect(config('admin_boilerplate.url') . '/signin');
+            return redirect(config('admin.url') . '/signin');
         }
 
         if (\Auth::user()->all_access != 1) {
