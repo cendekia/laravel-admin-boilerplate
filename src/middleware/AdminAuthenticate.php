@@ -20,7 +20,7 @@ class AdminAuthenticate
             return redirect(config('admin.url') . '/signin');
         }
 
-        if (\Auth::user()->all_access != 1) {
+        if (\Auth::user()->admin_access != 1) {
             return redirect('/');
         }
 

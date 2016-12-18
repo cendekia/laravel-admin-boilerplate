@@ -16,7 +16,7 @@ class AddDefaultAdmin extends Migration
         $admin = new App\User;
         $admin->name = 'Super Administrator';
         $admin->email = env('ADMIN_DEFAULT_EMAIL', 'admin@demo.com');
-        $admin->all_access = 1;
+        $admin->admin_access = 1;
         $admin->password = \Hash::make(env('ADMIN_DEFAULT_PASSWORD', 'admindemo'));
         
         if ($admin->save()) {

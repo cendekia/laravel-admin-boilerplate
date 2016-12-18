@@ -14,7 +14,7 @@ class AddAllAccessFieldAtUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->boolean('all_access')->default(0)->after('password');
+            $table->boolean('admin_access')->default(0)->after('password');
         });
     }
 
@@ -26,7 +26,7 @@ class AddAllAccessFieldAtUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('all_access');
+            $table->dropColumn('admin_access');
         });
     }
 }
