@@ -50,6 +50,7 @@ class AdminBoilerplateServiceProvider extends ServiceProvider
         ], 'template');
 
         $router->middleware('admin.auth', 'App\Http\Middleware\Admin\AdminAuthenticate');
+        $router->middleware('admin.logged', 'App\Http\Middleware\Admin\RedirectIfAuthenticated');
     }
 
     /**
