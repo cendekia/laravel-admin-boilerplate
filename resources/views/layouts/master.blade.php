@@ -14,7 +14,7 @@
 	    <link href="{{ admin_elixir('css/admin-boilerplate.css') }}" rel="stylesheet">
 	</head>
 
-	<body class="theme-red">
+	<body class="theme-{{ admin_theme('color') }}">
 		
 		@include('admin-view::components.preloader')
 	    <div class="overlay"></div>
