@@ -12,6 +12,7 @@
 	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 	    <!-- Admin CSS -->
 	    <link href="{{ admin_elixir('css/admin-boilerplate.css') }}" rel="stylesheet">
+	   	@stack('custom_css')
 	</head>
 
 	<body class="theme-{{ admin_theme('color') }}">
@@ -31,8 +32,10 @@
 
 	    <!-- Plugin Js -->
 	    <script src="{{ admin_elixir('js/admin-boilerplate.js') }}"></script>
+	    
 	    <!-- Custom Js -->
 	    <script src="{{ admin_elixir('js/admin-custom.js') }}"></script>
-	    <script src="{{ admin_elixir('js/admin-page-index.js') }}"></script>
+
+	    @stack('custom_js')
 	</body>
 </html>

@@ -13,7 +13,7 @@
                 <ul class="dropdown-menu pull-right">
                     <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
                     <li role="seperator" class="divider"></li>
-                    <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
+                    <li><a href="{{ admin_url('members') }}"><i class="material-icons">group</i>Members</a></li>
                     <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
                     <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
                     <li role="seperator" class="divider"></li>
@@ -27,7 +27,7 @@
     <div class="menu">
         <ul class="list">
             <li class="header">MAIN NAVIGATION</li>
-            <li class="active">
+            <li class="{{ ($currentPage=='')?'active':'' }}">
                 <a href="{{ admin_url('/') }}">
                     <i class="material-icons">home</i>
                     <span>Home</span>

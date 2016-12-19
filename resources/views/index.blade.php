@@ -1,5 +1,9 @@
 @extends('admin-view::layouts.master')
 
+@push('custom_js')
+    <script src="{{ admin_elixir('js/admin-page-index.js') }}"></script>
+@endpush
+
 @section('content')
     <div class="container-fluid">
         <div class="block-header">

@@ -9,6 +9,7 @@ Route::group(['prefix' => $prefix, 'namespace' => $path, 'middleware' => ['web']
 	
 	Route::group(['middleware' => ['admin.auth']], function() {
 		Route::get('/',  'DashboardController@index');
+		Route::get('/members',  'MemberController@index');
 		Route::get('signout', 'AuthController@getSignOut');
 	});
 });
