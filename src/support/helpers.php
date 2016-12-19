@@ -76,3 +76,8 @@ function admin_elixir($file, $buildDirectory = 'vendor/cendekia/laravel-admin-bo
 
     throw new InvalidArgumentException("File {$file} not defined in asset manifest.");
 }
+
+function current_page($page = '', $segment = 2, $class = 'active')
+{
+    return (\Request::segment($segment) == $page) ? $class : '';
+}
