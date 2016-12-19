@@ -15,7 +15,7 @@
                     <li role="seperator" class="divider"></li>
                     <li><a href="{{ admin_url('members') }}"><i class="material-icons">group</i>Members</a></li>
                     <li role="seperator" class="divider"></li>
-                    <li><a href="{{ config('admin.url') . '/signout' }}"><i class="material-icons">input</i>Sign Out</a></li>
+                    <li><a href="{{ admin_url('signout') }}"><i class="material-icons">input</i>Sign Out</a></li>
                 </ul>
             </div>
         </div>
