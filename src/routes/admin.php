@@ -1,7 +1,7 @@
 <?php
 
-$prefix = config('admin_boilerplate.url');
-$path = config('admin_boilerplate.controller_path');
+$prefix = config('admin.url');
+$path = config('admin.controller_path');
 
 Route::group(['prefix' => $prefix, 'namespace' => $path, 'middleware' => ['web']], function () {
     Route::get('signin', 'AuthController@getSignIn');
