@@ -2483,7 +2483,7 @@ section.content {
   .btn:not(.btn-link):not(.btn-circle):hover {
     outline: none; }
   .btn:not(.btn-link):not(.btn-circle) i {
-    font-size: 20px;
+    font-size: 16px;
     position: relative;
     top: 3px; }
 
@@ -7935,9 +7935,11 @@ fieldset[disabled] .form-control {
     .dataTables_wrapper input[type="search"]:focus, .dataTables_wrapper input[type="search"]:active {
       border-bottom: 2px solid #1f91f3; }
   .dataTables_wrapper .dt-buttons {
-    position: absolute;
+    /*position: absolute;
     top: 0;
-    left: 0; }
+    left: 0; */
+    margin-bottom: 15px;
+  }
     .dataTables_wrapper .dt-buttons a.dt-button {
       background-color: #607D8B;
       color: #fff;

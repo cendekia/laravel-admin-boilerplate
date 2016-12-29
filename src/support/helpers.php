@@ -81,3 +81,40 @@ function current_page($page = '', $segment = 2, $class = 'active')
 {
     return (\Request::segment($segment) == $page) ? $class : '';
 }
+
+function admin_edit_button($url, $admin)
+{
+    $allow = crud_check($admin);
+
+    return ($allow['edit']) ? '<a href="'. $url .'" class="btn btn-xs btn-info"><i class="glyphicon glyphicon-edit"></i></a>&nbsp;' : '';
+}
+
+function admin_delete_button($url, $admin = null)
+{
+    $allow = crud_check($admin);
+
+    return ($allow['destroy']) ? view('admin-view::default.delete_button', compact('url')) : '';
+}
+
+function crud_check($admin = null)
+{
+    //check if alpha
+    $superAllow = false;
+    $admin = ($admin) ?: \Auth::user();
+
+    if (\Session::get('admin.role')->id == 1) {
+        $superAllow = true;
+    }
+
+    //crud button permission check
+    $action = \Route::getCurrentRoute()->getAction();
+    $baseAction = str_replace('index', '', $action['as'], $count);
+    $baseAction = ($count > 0) ? $baseAction : str_replace('ajax', '', $action['as'], $count);
+
+    return [
+        'create' => ($superAllow) ?: User::hasAccess($baseAction.'create', $admin),
+        'edit' => ($superAllow) ?: User::hasAccess($baseAction.'edit', $admin),
+        'destroy' => ($superAllow) ?: User::hasAccess($baseAction.'destroy', $admin),
+    ];
+
+}
