@@ -24,7 +24,7 @@ class AddDefaultAdmin extends Migration
             $role = new App\Models\Role;
             $role->slug = 'super-admin';
             $role->name = 'Super Admin';
-            $role->whitelisted_ip_addresses = \Request::ip();
+            $role->registered_ip_address = \Request::ip();
 
             if ($role->save()) {
                 $userRole = new App\Models\UserRole;
