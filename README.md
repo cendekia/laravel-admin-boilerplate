@@ -18,3 +18,10 @@ A boilerplate of laravel administrator package for laravel 5.
   ]
   ```
 4. Run `php artisan vendor:publish`
+5. Defining One to One Relationship between User and UserRole, add this userRole method on existing User model:
+``` php
+	public function userRole()
+    {
+        return $this->hasOne(UserRole::class);
+    }
+```
