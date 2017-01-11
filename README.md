@@ -8,20 +8,20 @@ A boilerplate of laravel administrator package for laravel 5.
 1. Run `composer require cendekia/laravel-admin-boilerplate`
 2. Run `composer install`
 3. Add providers
-  ``` php
-  providers => [
+	``` php
+		providers => [
 
-    ...
-    Cendekia\LaravelAdminBoilerplate\AdminBoilerplateServiceProvider::class,
-    ...
+			...
+			Cendekia\LaravelAdminBoilerplate\AdminBoilerplateServiceProvider::class,
+			...
 
-  ]
-  ```
-4. Run `php artisan vendor:publish`
-5. Defining One to One Relationship between User and UserRole, add this userRole method on existing User model:
-``` php
-	public function userRole()
-    {
-        return $this->hasOne(UserRole::class);
-    }
-```
+		]
+	```
+4. Run `php artisan vendor:publish --force`
+5. Defining One to One Relationship between User and UserRole, add this userRole method on existing User model
+	``` php
+		public function userRole()
+	    {
+	        return $this->hasOne(UserRole::class);
+	    }
+	```
