@@ -56,4 +56,15 @@ class AdminController extends BaseController
 
         return view('admin-view::default.' . $view, compact('datatableColumns', 'url', 'pageTitle', 'actionButtons'));
     }
+
+    public function getForm($query, $formAttr, $data = [])
+    {
+        $url = (isset($formAttr['url'])) ? $formAttr['url'] : '#';
+        $view = (isset($formAttr['view'])) ? $formAttr['view'] : 'form';
+        $method = (isset($formAttr['method'])) ? $formAttr['method'] : 'post';
+        $pageTitle = (isset($formAttr['pageTitle'])) ? $formAttr['pageTitle'] : $this->page;
+        $fields = (isset($formAttr['fields'])) ? $formAttr['fields'] : null;
+
+        return view('admin-view::default.' . $view, compact('query', 'url', 'pageTitle', 'method', 'fields', 'data'));
+    }
 }

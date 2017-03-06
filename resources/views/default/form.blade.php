@@ -1,4 +1,4 @@
-@extends('admin.layouts.master')
+@extends('admin-view::layouts.master')
 
 @section('content')
     <div class="panel panel-default">
@@ -9,7 +9,7 @@
         <div class="panel-body">
             {!! Form::model($query, ['url' => $url, 'method' => $method, 'class' => 'p-md col-md-12', 'enctype' => 'multipart/form-data']) !!}
 
-                @include('admin.layouts.error_and_message')
+                {{-- @include('admin.layouts.error_and_message') --}}
 
                 @foreach($fields as $field => $attr)
                     <?php
@@ -40,7 +40,7 @@
     </div>
 @endsection
 
-@push('scripts')
+@push('custom_js')
     <script>
         //
     </script>

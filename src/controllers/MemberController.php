@@ -21,6 +21,12 @@ class MemberController extends AdminController
 
         $this->actionAllowed = ['create', 'edit', 'delete'];
 
+        //fieldType|required|label|data
+        $this->editableFields = [
+            'email' => 'email|required',
+            'active' => 'select|required|status|subscribeStatus',
+        ];
+
         view()->share([
             'actionAllowed' => $this->actionAllowed
         ]);        
@@ -51,5 +57,26 @@ class MemberController extends AdminController
     public function index()
     {
         return parent::getTable($this->columns, $this->url, 'table', 'Members');
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $data = [
+            'subscribeStatus' => [0 => 'Inactive', 1 => 'Active']
+        ];
+
+        $formAttr = [
+            'url' => $this->url,
+            'method' => 'post',
+            'fields' => $this->editableFields,
+            'pageTitle' => 'add new subscribe'
+        ];
+
+        return parent::getForm(null, $formAttr, $data);
     }
 }
