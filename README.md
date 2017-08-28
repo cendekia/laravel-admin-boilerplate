@@ -26,7 +26,7 @@ A boilerplate of laravel administrator package for laravel 5.
 			return $this->hasOne(UserRole::class);
 		}
 	```
-6. (Laravel ^5.4) Registering admin route middlewares at App\Http\Kernel.php
+6. (For Laravel ^5.4) Registering admin route middlewares at App\Http\Kernel.php
 	
 	```php
 		...
